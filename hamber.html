@@ -11,16 +11,14 @@
         width: 100%;
         height: 100vh;
       }
-      .hamber {
+      #hamber {
         position: absolute;
         width: 100px;
         height: 100px;
         top: calc(50% - (100px / 2));
         left: calc(50% - (100px / 2));
       }
-      .hamber:focus-within {
-        background-color: red;
-      }
+
       .lines {
         width: 60px;
         height: 10px;
@@ -28,9 +26,9 @@
         border-radius: 5px;
         margin-top: 10px;
       }
-      .hamber > div {
-        animation: cross 1.5s cubic-bezier(1, 0.1, 0.1, 0.5) 1s infinite
-          alternate both;
+      #hamber:focus > div {
+        animation: cross 1.5s cubic-bezier(1, 0.1, 0.1, 1) 1s infinite alternate
+          both;
       }
 
       .acute {
@@ -57,7 +55,7 @@
     </style>
   </head>
   <body>
-    <div class="hamber">
+    <div id="hamber" tabindex="0">
       <div class="lines acute"></div>
       <div class="lines obtuse1"></div>
       <div class="lines obtuse2"></div>
