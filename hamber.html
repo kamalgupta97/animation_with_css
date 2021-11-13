@@ -18,6 +18,9 @@
         top: calc(50% - (100px / 2));
         left: calc(50% - (100px / 2));
       }
+      .hamber:focus-within {
+        background-color: red;
+      }
       .lines {
         width: 60px;
         height: 10px;
@@ -25,12 +28,10 @@
         border-radius: 5px;
         margin-top: 10px;
       }
-      .hamber:hover > div {
-        animation: cross 2s linear 0.3s 1 normal both;
+      .hamber > div {
+        animation: cross 1.5s cubic-bezier(1, 0.1, 0.1, 0.5) 1s infinite
+          alternate both;
       }
-      /* .hamber:not(hover) {
-        animation: cross 2s linear 0.3s 1 reverse both;
-      } */
 
       .acute {
         --rotating: 45deg;
@@ -44,9 +45,6 @@
         --rotating: 45deg;
         --moveUp: -20px;
       }
-      /* .hamber:active {
-        background-color: rebeccapurple;
-      } */
 
       @keyframes cross {
         from {
