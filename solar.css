@@ -1,0 +1,77 @@
+body {
+  position: absolute;
+  background-image: url("https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2072&q=80");
+  height: 100vh;
+  width: 100%;
+}
+.planets {
+  position: absolute;
+  width: var(--diameter);
+  height: var(--diameter);
+  top: calc(50% - (var(--diameter) / 2));
+  left: calc(50% - (var(--diameter) / 2));
+  border-radius: 50%;
+}
+.sun {
+  --diameter: 120px;
+  background: orange;
+}
+
+.mercury {
+  --diameter: 30px;
+  background: gray;
+  --moveXX: 100px;
+  animation: solarsystem 2s infinite linear;
+}
+.venus {
+  --diameter: 40px;
+  background: rosybrown;
+  --moveXX: 160px;
+  animation: solarsystem 3s infinite linear;
+}
+.earth {
+  --diameter: 50px;
+  background: aqua;
+  --moveXX: 220px;
+  animation: solarsystem 6s infinite linear;
+}
+.mars {
+  --diameter: 40px;
+  background: red;
+  --moveXX: 280px;
+  animation: solarsystem 9s infinite linear;
+}
+.jupiter {
+  --diameter: 80px;
+  background: wheat;
+  --moveXX: 360px;
+  animation: solarsystem 12s infinite linear;
+}
+.saturn {
+  --diameter: 40px;
+  background: brown;
+  --moveXX: 420px;
+  animation: solarsystem 15s infinite linear;
+}
+.uranus {
+  --diameter: 30px;
+  background: blueviolet;
+  --moveXX: 480px;
+  animation: solarsystem 18s infinite linear;
+}
+.neptune {
+  --diameter: 30px;
+  background: darkolivegreen;
+  --moveXX: 540px;
+  animation: solarsystem 21s infinite linear;
+}
+
+@keyframes solarsystem {
+  from {
+    transform: rotate(0deg) translateX(var(--moveXX)) translateY(var(--moveXX));
+  }
+  to {
+    transform: rotate(360deg) translateX(var(--moveXX))
+      translateY(var(--moveXX));
+  }
+}

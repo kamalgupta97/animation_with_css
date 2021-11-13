@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+      }
+      .hamber {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: calc(50% - (100px / 2));
+        left: calc(50% - (100px / 2));
+      }
+      .lines {
+        width: 60px;
+        height: 10px;
+        background-color: teal;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+      .hamber:hover > div {
+        animation: cross 2s linear 0.3s 1 normal both;
+      }
+      /* .hamber:not(hover) {
+        animation: cross 2s linear 0.3s 1 reverse both;
+      } */
+
+      .acute {
+        --rotating: 45deg;
+        --moveUp: 20px;
+      }
+      .obtuse1 {
+        --rotating: -45deg;
+        --moveUp: 0px;
+      }
+      .obtuse2 {
+        --rotating: 45deg;
+        --moveUp: -20px;
+      }
+      /* .hamber:active {
+        background-color: rebeccapurple;
+      } */
+
+      @keyframes cross {
+        from {
+          transform: translateY(0px) rotate(0);
+        }
+        to {
+          transform: translateY(var(--moveUp)) rotate(var(--rotating));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hamber">
+      <div class="lines acute"></div>
+      <div class="lines obtuse1"></div>
+      <div class="lines obtuse2"></div>
+    </div>
+  </body>
+</html>
