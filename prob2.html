@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+      }
+      .box {
+        position: absolute;
+        background: red;
+        width: 100px;
+        height: 100px;
+        top: 50%;
+      }
+
+      .box {
+        animation: opacityapplied 2s ease-in 0s 1 normal both;
+      }
+      .box:hover {
+        animation: rots 2s ease-in 0s 1 normal both;
+      }
+      @keyframes opacityapplied {
+        from {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+        to {
+          transform: translateX(30px);
+          opacity: 1;
+        }
+      }
+      @keyframes rots {
+        from {
+          transform: scale(1) rotate(0deg);
+          border-radius: 0%;
+        }
+        to {
+          transform: scale(1.2) rotate(360deg);
+          border-radius: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Problem 1: hover
+create necessary classes that if applied to an element on hover it will scale up the element by 1.2x, and do it over 0.5 seconds
+do it for a square of 100px of red colour -->
+
+    <div class="box"></div>
+  </body>
+</html>
